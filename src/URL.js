@@ -1,0 +1,1 @@
+export const USER_URL='https://641a9874c152063412dc9164.mockapi.io/ecom/'
