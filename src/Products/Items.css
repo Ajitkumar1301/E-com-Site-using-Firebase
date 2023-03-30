@@ -1,0 +1,98 @@
+.items{
+display: flex;
+flex-flow: column;
+justify-content: space-between;
+width: 15rem;
+height: 30rem;
+margin-left: 10rem;
+}
+
+.products {
+    width: 23%;
+    margin: 10px;
+  }
+.prod{
+    display: flex;
+    width: 90%;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem;
+  
+}
+
+  .addto{
+    background-color: darkolivegreen;
+
+  }
+
+ 
+  .headbtn{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  
+  @media only screen and (max-width: 1000px) {
+    .items{
+     
+    }
+    .btn1{
+      width:1rem;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .products{
+      margin-right: 1rem;
+       width: 25rem;
+    }
+    .MuiButtonBase-root-MuiButton-root{
+      background-color: aqua;
+    }
+   
+    .headbtn{
+     
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+     
+      row-gap: 1rem;
+    }
+    .head{
+      
+     font-size: 15px;
+    }
+  }
+  .MuiMenu-root ul{
+    background-color: lightsteelblue;
+    color: darkslategrey;
+  }
+  .some{
+    background-color: red;
+  }
+  .MuiButton-root{
+    background-color: black;
+  }
+.additems{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+  
+
+.last{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: darkcyan;
+}
+.empty{
+  display: flex;
+  font-weight: 700;
+  font-size: xx-large;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: darkolivegreen;
+}

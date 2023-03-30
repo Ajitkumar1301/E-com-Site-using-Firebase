@@ -1,0 +1,7 @@
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 9px;
+    margin-top: 10px;
+}

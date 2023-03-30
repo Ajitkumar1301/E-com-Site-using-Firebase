@@ -1,0 +1,191 @@
+
+.App{
+  min-height: 100vh;
+  background-color: whitesmoke;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  
+}
+
+.reg{
+  /* background-color: aqua; */
+  margin-left: 13rem;
+  margin-top: 7rem;
+}
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:15rem;
+}
+.title{
+  margin-bottom: 2rem;
+}
+
+
+.homebtn{
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 5rem;
+  margin-bottom: 3rem;
+}
+
+.web{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+ 
+}
+.create{
+  margin-top: 3rem;
+
+}
+
+/* .btn{
+  color: antiquewhite;
+  background-color: cadetblue;
+  border-color: whitesmoke;
+  font-size: 14px;
+} */
+.btn1{
+  margin-left: 45rem;
+  width: 15rem;
+  height:3rem;
+  color: antiquewhite;
+  background-color: cadetblue;
+  border-color: whitesmoke;
+}
+
+
+.table{
+ background-color: antiquewhite;
+ margin-left: 15rem;
+ margin-top: 5rem;
+}
+
+/* .crebtn{
+  background-color: aqua;
+  width: 2rem;
+} */
+
+.readbtn{
+  background-color: cadetblue;
+  color: aliceblue;
+  width:9rem;
+}
+.cusbtn{
+  background-color: cadetblue;
+  color: aliceblue;
+  width:10rem;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .App{
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+  }
+  .btn{
+    width:4rem;
+    height:2rem;
+    font-size: 7px;
+  }
+  .homebtn{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+  .web{
+    margin-top: 0.5rem;
+    font-size: 20px;
+  }
+  .table{
+      margin-left: 2rem;
+     color: azure;
+   }
+   .btn{
+      width: 3rem;
+  }
+  .homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    margin-right: 3rem;
+  }
+  .emp{
+    width: 10rem;
+   
+  }
+  .readbtn{
+    width: 8rem;
+    font-size: 13px;
+  }
+  .cusbtn{
+    width:8rem;
+    font-size: 10px;
+  }
+  
+}
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(247, 204, 147, 0.692);
+  -webkit-box-shadow: 0 0 1px rgba(185, 242, 247, 0.5);
+}
+
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.emp{
+  color: antiquewhite;
+  background-color: cadetblue;
+  border-color: whitesmoke;
+  margin-left: 3rem;
+}
+
+.homepage{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+
+.hometxt{
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+.add{
+ width:10rem;
+ height: 3rem;
+}
+.cancel{
+  width:6rem;
+  height:3rem;
+ }
+ 
+ @media only screen and (min-width: 600px) {
+  /* For desktop: */
+  .addtable{
+   margin-left: 25rem;
+  }
+ }
