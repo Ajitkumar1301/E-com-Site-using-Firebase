@@ -2,31 +2,37 @@ import React, { useState } from 'react'
 import { Container,TextField } from '@mui/material'
 import { Link, useNavigate } from 'react-router-dom'
 import { db } from '../firebase-config'
-import {collection, addDoc} from 'firebase/firestore'
+import {doc,setDoc} from 'firebase/firestore'
+import { UserAuth } from '../Context/AuthContext'
 
 
 const Create = () => {
 const navigate=useNavigate()
+const { user } = UserAuth();
+
 const[details,setDetails]=useState({
   name:"",
   age:"",
   address:"",
   sal:"",
   pno:"",
+  role:"vendor",
+  id:user.uid,
 })
  
 
 const postData=async(e)=>{
-  e.preventDefault()
-  try {
-    await addDoc(collection(db, 'employee'), {
-      details:details
-    },  navigate('/read'))
-  }
-  catch (err) {
-    alert(err)
-  }
-}    
+  const vendorRef=doc(db, 'vendor',user.uid)
+   e.preventDefault()
+   try {
+     await setDoc(vendorRef, {
+       details:details,
+     },  navigate('/'))
+   }
+   catch (err) {
+     alert(err)
+   }
+ }    
  
        
 
@@ -60,7 +66,7 @@ const handleChange = (e) => {
     <div className='d-flex justify-content-between'>
     <button className="btn btn-primary add">
 ADD Employee</button>
-    <Link  to='/read'><button className='btn btn-danger cancel'>
+    <Link  to='/'><button className='btn btn-danger cancel'>
       Cancel</button></Link></div>
   </Container>
   </form>

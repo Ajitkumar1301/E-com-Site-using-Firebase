@@ -18,6 +18,9 @@ import CustomerUpdate from './Customer/CustomerUpdate';
 import { UserAuth } from './Context/AuthContext';
 import Last from './Products/Last';
 import Orders from './Products/Orders';
+import Seller from './Employee/Seller';
+import GreenButton from './Components/GreenButton';
+import Profile from './Profile'
 
 function App() {
  
@@ -44,6 +47,8 @@ const Admin_ID='Hh2Z02YOdegdLyiRAurGkqeO5xm2';
             <Route path='/create' element={<ProtectedRoute><Create /></ProtectedRoute>}></Route>
             <Route path='/last' element={<ProtectedRoute><Last /></ProtectedRoute>}></Route>
             <Route path='/orders' element={<ProtectedRoute><Orders /></ProtectedRoute>}></Route>
+            <Route path='/seller' element={<ProtectedRoute><Seller /></ProtectedRoute>}></Route>
+            <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>}></Route>
             <Route path='/update' element={<Update />} ></Route>
         </Routes>
      </div>

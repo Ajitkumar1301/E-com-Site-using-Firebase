@@ -52,7 +52,7 @@ useEffect(() => {
     });
     return () => unsub();
   }, []);
-  console.log('content',content)
+  // console.log('content',content)
 
   return (
     <div>

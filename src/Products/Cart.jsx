@@ -17,6 +17,8 @@ const Cart = () => {
   const state = Globalstate.state;
   const dispatch = Globalstate.dispatch;
   const role=Globalstate.role;
+
+
   console.log('daaaa',role);
 const navigate=useNavigate()
 
@@ -42,7 +44,7 @@ const postData=async()=>{
 }
 
 const total = state.reduce((total, item) => {
-  return total + item.price * item.quantity;
+  return total + item.products.price * item.quantity;
 }, 0);
 
 
@@ -62,7 +64,7 @@ return (
        </Link>
        </div>
       <div className="total">
-        <h2>Total  <h3 style={{color:'green'}}> ₹ {total.toFixed(0)}</h3></h2>
+        <h2>Total  <h3 style={{color:'green'}}> ₹ {total}</h3></h2>
         <div className="mb-2">       
           {state.length > 0 &&
         <Button onClick={ postData } className="text-decoration-none " variant="contained" size="small" type="button" >
@@ -79,22 +81,17 @@ return (
       return (
         <div className="products" key={index}>
    <Card sx={{ maxWidth: 285,backgroundColor:'whitesmoke' }}>
-      <CardMedia
-        component="img"
-        alt="/"
-        sx={{width:'10rem',height:'13rem',marginLeft:'3rem',marginTop:'0.5rem'}}
-        image={item.image}
-      />
+     {/* {console.log(item.quantity)} */}
       <CardContent>
         <Typography gutterBottom sx={{fontSize:'13px',fontWeight: 'bold'}} component="div">
-          {item.title}
+          {item.products.iname}
         </Typography>
         <Typography variant="body2">
      {item.quantity < 2 ?
-     (<span className="fw-bolder text-success">  ₹   {(item.quantity * item.price).toFixed(0)}</span> ): 
+     (<span className="fw-bolder text-success">  ₹   {(item.quantity * item.products.price).toFixed(0)}</span> ): 
      (<span className="fw-bolder text-success">
-      <span className="text-secondary"> {item.quantity}</span>  * <span className="text-dark">{item.price.toFixed(0)}</span> =
-      ₹   {(item.quantity * item.price).toFixed(0)}</span>
+      <span className="text-secondary"> {item.quantity}</span>  * <span className="text-dark">{item.products.price}</span> =
+      ₹   {item.quantity * item.products.price}</span>
     )}
         </Typography>
       </CardContent>

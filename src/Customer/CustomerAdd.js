@@ -30,7 +30,7 @@ const postData=async(e)=>{
   try {
     await setDoc(customerRef, {
       details:details,
-    },  navigate('/customer'))
+    },  navigate('/'))
   }
   catch (err) {
     alert(err)
@@ -65,7 +65,7 @@ const handleChange = (e) => {
     <div className='d-flex justify-content-between'>
     <button className="btn btn-primary add">
 ADD Employee</button>
-    <Link  to='/customer'><button className='btn btn-danger cancel'>
+    <Link  to='/'><button className='btn btn-danger cancel'>
       Cancel</button></Link></div>
   </Container>
 </form>

@@ -3,7 +3,7 @@ import { db } from '../firebase-config'
 import { collection,getDocs,query,onSnapshot } from 'firebase/firestore'
 import { Carts } from '../Context/Context'
 import { UserAuth } from '../Context/AuthContext'
-import {  Table, TableBody, TableCell, TableHead, TableRow,Button } from '@mui/material'
+import {  Button } from '@mui/material'
 import SingleCard from './SingleCard'
 import { Link, useNavigate } from 'react-router-dom'
 import { IoChevronBackCircle } from 'react-icons/io5'
@@ -67,7 +67,7 @@ const Orders = () => {
        {
     workData.map((data)=>{
      data?.order?.map((da)=>
-     console.log('sasa',da)
+     console.log('sasa',da.products.iname)
      )
     })
   }

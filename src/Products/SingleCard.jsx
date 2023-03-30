@@ -2,40 +2,43 @@ import {useContext} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions,CardMedia } from '@mui/material';
+import { Button,  CardActions } from '@mui/material';
 import {  Carts} from '../Context/Context';
+import { UserAuth } from '../Context/AuthContext';
 
 export default function SingleCard({item,some,prod}) {
    
   const Globalstate=useContext(Carts)
   const state = Globalstate.state;
   const dispatch = Globalstate.dispatch;
-  console.log(Globalstate);
+  const vendor= Globalstate.singleVendor;
+  const { user } = UserAuth();
+  // console.log(Globalstate);
  
- 
-   
+//  console.log(item.id);
+  //  console.log(Object.keys(vendor.details).length);
   return (
 
     <div className='products'>
     <Card sx={{ maxWidth: 285,backgroundColor:'whitesmoke' }}>
-       <CardMedia
+       {/* <CardMedia
          component="img"
          alt="/"
          sx={{width:'10rem',height:'13rem',marginLeft:'3rem',marginTop:'0.5rem'}}
          image={item.image}
-       />
+       /> */}
        <CardContent>
          <Typography gutterBottom sx={{fontSize:'13px',fontWeight: 'bold'}} component="div">
-           {item.title}
+           {item.products.iname}
          </Typography>
          <Typography variant="body2">
-         <span className='fw-bolder'>Price:</span><span className="fw-bolder text-success">  ₹ {(item.price).toFixed(0)}</span>
+         <span className='fw-bolder'>Price:</span><span className="fw-bolder text-success">  ₹ {(item.products.price)}</span>
          </Typography>
-         {!prod &&
+       
          <Typography variant="body2">
          <span className='fw-bolder'>Quantity:</span><span className="fw-bolder text-success">{item.quantity}</span>
-         </Typography> }
-         {!some &&  
+         </Typography> 
+         
        <Typography  sx={{
        overflow: 'hidden',
        textOverflow: 'ellipsis',
@@ -44,12 +47,13 @@ export default function SingleCard({item,some,prod}) {
        WebkitBoxOrient: 'vertical',
     }} variant="body2">
         <span className='fw-bolder'>Product Details:</span><br></br>
-         {item.description}
-         </Typography>}
+         {item.products.desc}
+         </Typography>
        </CardContent>
        <CardActions>
-        {!some &&  
+       {(user.uid !== vendor?.details?.id && !some)  &&
          <div className='d-flex justify-content-center align-items-center w-100'>
+       
        {state.some((p) => p.id === item.id) ? (
        <Button size="small"
        variant="contained"
