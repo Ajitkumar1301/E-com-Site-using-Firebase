@@ -4,4 +4,11 @@
     row-gap: 50px;
     column-gap: 9px;
     margin-top: 10px;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+.home{
+    padding-left: 2.5rem;
+}
 }

@@ -1,0 +1,116 @@
+.sig{
+    padding-top: 12rem;
+    height: 100vh;
+}
+.headtxt{
+    font-weight: 700;
+    font-size: 28px;
+    color: grey;
+    padding-left: 10.5rem;
+
+}
+.form{
+   height: 18rem;
+    margin-left: 30rem;
+    width: 30rem;
+  
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.grpbtn{
+    margin-top: 0.5rem;
+}
+.logbtn{
+        background-image: linear-gradient(to right, #FF5F6D 0%, #FFC371  51%, #FF5F6D  100%);
+        margin: 10px;
+        padding: 10px 25px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        border: none;
+        font-weight: 600;
+      }
+
+    
+      .logbtn:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+     
+.newbtn{
+        background-image: linear-gradient(to right, #A1FFCE 0%, #FAFFD1  51%, #A1FFCE  100%);
+        margin: 10px;
+        padding: 12px 25px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: darkslategray;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        border: none;
+        font-weight: 600;
+        margin-left: 12.4rem;
+      }
+
+      .newbtn:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: darkslategrey;
+        text-decoration: none;
+        font-weight: 600;
+      }
+     
+      @media only screen and (max-width: 1024px) {
+        .form{
+            height: 18rem;
+             margin-left: 15rem;
+             width: 30rem;
+             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+         }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .form{
+            height: 18rem;
+             margin-left: 8rem;
+             width: 30rem;
+             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+         }
+       
+         
+    
+    }
+
+    @media only screen and (max-width: 500px) {
+        .form{
+            height: 18rem;
+             margin-left: 2.3rem;
+             width: 20rem;
+             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+         }
+         
+         .logbtn{
+            width: 7rem;
+            margin-top: 1rem;
+            padding: 5px 5px;
+        text-align: center;
+         }
+         .newbtn{
+            width: 7rem;
+            /* margin-top: 1rem; */
+            padding: 5px 5px;
+        text-align: center; 
+        margin-left: 2rem;
+         }
+         .headtxt{
+           
+            padding-left: 7rem;
+        }
+    }
+    

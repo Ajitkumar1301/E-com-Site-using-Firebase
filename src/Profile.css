@@ -2,37 +2,100 @@
     display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: whitesmoke;
+  
   height: 100vh;
 }
 
 .heading{
+  font-size: large;
     font-weight: 800;
-    color:  rgb(14, 61, 33) ;
+    color:  #DE6262 ;
     margin-bottom: 2rem;
 }
 
 .profile{
   display: flex;
-  flex-direction: column;
   /* align-items: center; */
   /* justify-content: center; */
     padding-top: 2rem;
+    padding-left: 4rem;
   height: 30rem;
-  width:25rem;
-  color: aliceblue;
-    background-color: red; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, rgb(4, 90, 47) , rgb(0, 0, 0));
+  width:55rem;
+  color: #b92b27;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+  background: #DE6262;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+}
 
+.left{
+  display: flex;
+  flex-direction: column;
 }
 
 .avatar{
-margin-left: 7.5rem;
+margin-left: 3.5rem;
 }
 
 .details{
-    margin-left: 4rem;
+  display: flex;
+    margin-left: 1rem;
 }
 .topbtn{
+  padding-top: 1rem;
   margin-left: 3rem;
+}
+
+.det{
+  font-weight: 600;
+  color: whitesmoke;
+  padding-left: 2rem;
+  padding-top: 2.9rem;
+  
+}
+
+.det1{
+  font-weight: 600;
+  color: whitesmoke;
+  padding-left: 4rem;
+  padding-top: 3rem;
+}
+
+.details1{
+  display: flex;
+  margin-left: 10rem;
+}
+
+@media only screen and (max-width: 700px) {
+ .profile{
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  height: max-content;
+  height: 55rem;
+ }
+ .details{
+  display: flex;
+
+    margin-left: -3rem;
+}
+ .details1{
+  display: flex;
+  margin-left: -3rem;
+}
+.avatar{
+  margin-left: 2.5rem;
+  }
+.heading{
+  margin-top: 1rem;
+}
+.topbtn{
+  margin-left: 0.3rem;
+}
+.det1{
+ 
+  padding-left: 6rem;
+ 
+}
 }

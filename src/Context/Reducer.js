@@ -26,9 +26,7 @@ export const cartReducer = (state, action) => {
       });
       return tempstate2;
     case "REMOVE":
-      const tempstate3 = state.filter(
-        (item) => item.id !== action.payload.id
-      );
+      const tempstate3 = state.filter((item) => item.id !== action.payload.id);
 
       return tempstate3;
 
