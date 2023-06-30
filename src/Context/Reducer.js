@@ -29,7 +29,6 @@ export const cartReducer = (state, action) => {
       const tempstate3 = state.filter((item) => item.id !== action.payload.id);
 
       return tempstate3;
-
     default:
       return state;
   }

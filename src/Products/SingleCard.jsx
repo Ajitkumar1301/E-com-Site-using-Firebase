@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActions } from "@mui/material";
 import { Carts } from "../Context/Context";
 import { UserAuth } from "../Context/AuthContext";
-import moment from "moment/moment";
 
 export default function SingleCard({ item, some, prod, ordDate }) {
   const Globalstate = useContext(Carts);

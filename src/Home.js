@@ -15,9 +15,6 @@ const Home = () => {
 
   const { user } = UserAuth();
 
-  // const query = collection(db, `customer/${user.uid}/order`);
-  // const [docs, loading, error] = useCollectionData(query);
-
   const Admin_ID = "Hh2Z02YOdegdLyiRAurGkqeO5xm2";
 
   // const filterData=vendor.filter((data)=>{
@@ -135,7 +132,6 @@ const Home = () => {
           User Email<p className="text-success"> {user.email}</p>
         </p>
       </div>
-      <div></div>
     </div>
   );
 };
